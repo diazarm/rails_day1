@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# Este archivo es la db que utiliza para hacer los test, es independiente de la db de desarollo.
 one:
-  title: MyString
-  description: MyText
-  price: 1.5
+  title: Iphone usado
+  description: telefono usado por varias personas
+  price: 200
 
 two:
-  title: MyString
-  description: MyText
-  price: 1.5
+  title: Samsung casi nuevo
+  description: telefono usado por dos personas
+  price: 120

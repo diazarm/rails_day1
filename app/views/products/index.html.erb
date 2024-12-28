@@ -1,8 +1,12 @@
 <h1>Productos</h1>
-
+<br>
 <ul>
 <% @products.each do |product| %>
-<li><h2><%= product.title %></h2></li>
-<h3>El valor es  $ <%= product.price%></h3>
+    <h3>Id del producto: <%= product.id%></h3>
+    <%= link_to product_path(product.id), class: 'product' do %>
+    <li><h2><%= product.title %></h2></li>
+    <% end %>
+    <h3>El valor es  $ <%= product.price%></h3>
+    <hr>
 <% end%> 
 </ul>
