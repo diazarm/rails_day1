@@ -9,6 +9,18 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest # trae la logica 
   end
 
   test 'render a detailed product page' do
+    get product_path(products(:one))
 
+    assert_response :success     #pedimos que la respuesta sea correcta, osea que se renderizan los productos
+    assert_select '.title', 'Iphone usado'
+    assert_select '.description', 'telefono usado por varias personas' 
+    # assert_select 'price', 200
   end
+
+  test 'render a new product form' do
+    get new_product_path
+    assert_response :success     #pedimos que la respuesta sea correcta, osea que se
+    # assert_select 'form'
+  end
+
 end
