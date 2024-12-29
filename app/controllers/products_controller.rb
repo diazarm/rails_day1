@@ -21,12 +21,28 @@ class ProductsController < ApplicationController #en AppController esta toda la 
     else
       render :new, status: :unprocessable_entity #renderiza pero solo con la resp. que devuelva al nav cod 422 (cuando no se pudo guardar algo en db)
     end
+
   end
+  
+  def edit
+    @product=Product.find(params[:id])
+   
+  end
+  
+  def update
+    @product=Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to products_path, notice: "Tu producto se ha actualizado correctamente"
+    else
+      render :edit, status: :unprocessable_entity #renderiza pero solo con la resp. que
+    end
+  end
+
 
   private
 
   def product_params
     params.require(:product).permit(:title, :price, :description)
   end
-
+  
 end

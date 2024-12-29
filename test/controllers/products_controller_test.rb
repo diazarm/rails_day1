@@ -20,7 +20,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest # trae la logica 
   test 'render a new product form' do
     get new_product_path
     assert_response :success     #pedimos que la respuesta sea correcta, osea que se
-    # assert_select 'form'
+    assert_select 'form'
   end
 
   test 'allow to create a new product' do
@@ -34,9 +34,9 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest # trae la logica 
 
     assert_redirected_to products_path
     assert_equal flash[:notice], 'Tu producto se ha creado correctamente'
-    end
+  end
 
-    test 'does not allow to create a new product with empty fields' do
+  test 'does not allow to create a new product with empty fields' do
       post products_path, params: {
         product: {
           title: '',
@@ -46,5 +46,34 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest # trae la logica 
       }
   
       assert_response :unprocessable_entity #devuelve el status 422
-      end
+  end
+
+  test 'render an edit product form' do
+    get edit_product_path(products(:one))
+    assert_response :success     #pedimos que la respuesta sea correcta, osea que se
+    assert_select 'form'
+  end
+
+  test 'allow to update a product' do
+    patch product_path(products(:one)), params: {
+      product: {
+        title: 'Iphone nuevo',
+        description: 'telefono nuevo por varias personas',
+        price: 250  
+      }
+    }
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'Tu producto se ha actualizado correctamente'
+  end
+
+  test 'does not allow to update a product with an invalid field' do
+    patch product_path(products(:one)), params:{
+      product:{
+        price: nil
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
 end
