@@ -38,6 +38,13 @@ class ProductsController < ApplicationController #en AppController esta toda la 
     end
   end
 
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+
+    redirect_to products_path, notice: "Tu producto se ha eliminado correctamente", status: :see_other # status 303 enlaza a un enlace inexistente
+
+  end
 
   private
 
