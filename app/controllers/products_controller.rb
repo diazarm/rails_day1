@@ -2,11 +2,11 @@
 class ProductsController < ApplicationController #en AppController esta toda la logica
   
   def index  #creamos el metodo 
-    @products = Product.all  #
+    @products = Product.all.with_attached_photo  #hace una sola llamada de Query a la db optimizando el code
   end
   
   def show
-    @product = Product.find(params[:id])
+    product_id
   end
 
   def new
@@ -25,13 +25,12 @@ class ProductsController < ApplicationController #en AppController esta toda la 
   end
   
   def edit
-    @product=Product.find(params[:id])
+    product_id
    
   end
   
   def update
-    @product=Product.find(params[:id])
-    if @product.update(product_params)
+    if product_id.update(product_params)
       redirect_to products_path, notice: "Tu producto se ha actualizado correctamente"
     else
       render :edit, status: :unprocessable_entity #renderiza pero solo con la resp. que
@@ -39,8 +38,7 @@ class ProductsController < ApplicationController #en AppController esta toda la 
   end
 
   def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
+    product_id.destroy
 
     redirect_to products_path, notice: "Tu producto se ha eliminado correctamente", status: :see_other # status 303 enlaza a un enlace inexistente
 
@@ -52,4 +50,8 @@ class ProductsController < ApplicationController #en AppController esta toda la 
     params.require(:product).permit(:title, :price, :description, :photo)
   end
   
+  def product_id
+    @product = Product.find(params[:id])
+  end
+
 end
