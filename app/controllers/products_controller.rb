@@ -17,7 +17,7 @@ class ProductsController < ApplicationController #en AppController esta toda la 
     @product = Product.new(product_params)
     
     if @product.save
-      redirect_to products_path
+      redirect_to products_path, notice: "Tu producto se ha creado correctamente"
     else
       render :new, status: :unprocessable_entity #renderiza pero solo con la resp. que devuelva al nav cod 422 (cuando no se pudo guardar algo en db)
     end
