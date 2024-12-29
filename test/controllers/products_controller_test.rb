@@ -23,4 +23,16 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest # trae la logica 
     # assert_select 'form'
   end
 
+  test 'allow to create a new product' do
+    post products_path, params: {
+      product: {
+        title: 'Iphone nuevo',
+        description: 'telefono nuevo por varias personas',
+        price: 200  
+      }
+    }
+
+    assert_redirected_to products_path
+    end
+
 end

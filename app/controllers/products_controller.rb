@@ -19,7 +19,7 @@ class ProductsController < ApplicationController #en AppController esta toda la 
     if @product.save
       redirect_to products_path
     else
-      render :new 
+      render :new, status: :unprocessable_entity #renderiza pero solo con la resp. que devuelva al nav cod 422 (cuando no se pudo guardar algo en db)
     end
   end
 
