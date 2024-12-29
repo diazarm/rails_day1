@@ -49,7 +49,7 @@ class ProductsController < ApplicationController #en AppController esta toda la 
   private
 
   def product_params
-    params.require(:product).permit(:title, :price, :description)
+    params.require(:product).permit(:title, :price, :description, :photo)
   end
   
 end

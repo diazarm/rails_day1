@@ -3,6 +3,7 @@
 <ul>
 <% @products.each do |product| %>
     <h3>Id del producto: <%= product.id%></h3>
+    <%= image_tag product.photo, width: 150 if product.photo.attached? %> 
     <%= link_to product_path(product.id), class: 'product' do %>
     <li><h2><%= product.title %></h2></li>
     <% end %>

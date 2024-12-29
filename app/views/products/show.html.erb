@@ -1,5 +1,7 @@
 <h2>Producto elegido: </h2>
 <p class='title'><%= @product.title %></p>
+<%= image_tag @product.photo, width: 300 if @product.photo.attached? %> 
+<%# Aqui arriba mostramos la foto que tenemos guardada %>
 <h3>Descripcion del producto</h3>
 <hr>
 <p class='description'><%= @product.description %></p>
