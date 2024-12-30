@@ -1,7 +1,7 @@
- <h3>Id del producto: <%= product.id%></h3>
-    <%= image_tag product.photo, width: 150 if product.photo.attached? %> 
-    <%= link_to product_path(product.id), class: 'product' do %>
- <h2><%= product.title %></h2>
- <% end %>
+<h3>Id del producto: <%= product.id%></h3>
+   <%= image_tag product.photo, width: 150 if product.photo.attached? %> 
+   <%= link_to product_path(product.id), class: 'product' do %>
+<h2><%= product.title %></h2>
+   <% end %>
 <h3>El valor es  $ <%= product.price%></h3>
 <hr>
