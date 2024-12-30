@@ -1,4 +1,25 @@
 es:
+  activerecord:
+    models:
+      product: Producto
+    attributes:
+      product:
+        title: 'Titulo'
+        description: 'Descripción'
+        price: 'Precio'
+        photo: 'Foto'
+  common:
+    confirm: '¿Estás seguro?' 
   products:
     edit:
       title: 'Editar producto'
+    new:
+      title: 'Crear producto'
+    index:
+      title: 'Productos maravillosos'
+    create:
+      created: "Tu producto se ha creado correctamente"
+    update:
+      updated: "Tu producto se ha actualizado correctamente"
+    destroy:
+      delete: "Tu producto se ha eliminado correctamente"

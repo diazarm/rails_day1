@@ -28,7 +28,27 @@
 #       enabled: "ON"
 
 en:
+  activerecord:
+    models:
+      product: Producto
+    attributes:
+      product:
+      title: 'Title'
+      description: 'Description'
+      price: 'Price'
+      photo: 'Insert your product photo'
+  common:
+    confirm: 'Are you sure?' 
   products:
     edit:
       title: 'Edit product'
-
+    new:
+      title: 'Create new product'
+    index:
+      title: 'Wonderful products'
+    create:
+      created: "Your product has been created successfully"
+    update:
+      updated: "Your product has been successfully updated"
+    destroy:
+      delete: "Your product has been successfully removed"

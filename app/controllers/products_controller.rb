@@ -17,7 +17,7 @@ class ProductsController < ApplicationController #en AppController esta toda la 
     @product = Product.new(product_params)
     
     if @product.save
-      redirect_to products_path, notice: "Tu producto se ha creado correctamente"
+      redirect_to products_path, notice: t('.created')
     else
       render :new, status: :unprocessable_entity #renderiza pero solo con la resp. que devuelva al nav cod 422 (cuando no se pudo guardar algo en db)
     end
@@ -31,7 +31,7 @@ class ProductsController < ApplicationController #en AppController esta toda la 
   
   def update
     if product_id.update(product_params)
-      redirect_to products_path, notice: "Tu producto se ha actualizado correctamente"
+      redirect_to products_path, notice: t('.updated')
     else
       render :edit, status: :unprocessable_entity #renderiza pero solo con la resp. que
     end
@@ -40,7 +40,7 @@ class ProductsController < ApplicationController #en AppController esta toda la 
   def destroy
     product_id.destroy
 
-    redirect_to products_path, notice: "Tu producto se ha eliminado correctamente", status: :see_other # status 303 enlaza a un enlace inexistente
+    redirect_to products_path, notice: t('.delete'), status: :see_other # status 303 enlaza a un enlace inexistente
 
   end
 

@@ -1,27 +1,30 @@
-<%= form_with model: @product do |form|%>
-<% @product.errors.full_messages.each do |error| %> <%#recorre uno a uno para verificar los errores %>
-<div style=color:red>
-    <%= error %>
-</div>
-<br>
-<% end %>
-<div>
+<%= form_with model: @product do |form| %>
+  <% @product.errors.full_messages.each do |error| %>
+    <div style="color:red">
+      <%= error %>
+    </div>
+    <br>
+  <% end %>
+
+  <div>
     <%= form.label :title %>
     <%= form.text_field :title %>
-</div>
-<div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-</div>
-<div>
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-</div>
+  </div>
 
-<div>
+  <div>
+    <%= form.label :description  %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :price %> <!-- Agregado t() para price -->
+    <%= form.number_field :price %>
+  </div>
+
+  <div>
     <%= form.label :photo %>
     <%= form.file_field :photo %>
-</div>
+  </div>
 
-<%= form.submit %>
+  <%= form.submit %>
 <% end %>
