@@ -33,3 +33,15 @@ en:
       updated: "Your product has been updated successfully"
     destroy:
       delete: "Your product has been deleted successfully"
+    submit: "Create product"
+    show:
+      chosen_product: "Chosen product"
+      edit_product: "Edit product"
+      delete_product: "Delete product"
+      description: "Description product"
+  shared:
+    _header:
+      title: "Welcome to my first marketplace"
+      newProduct: "New product"
+    _product:
+      value: "Cost: $ "

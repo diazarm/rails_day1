@@ -3,5 +3,6 @@
    <%= link_to product_path(product.id), class: 'product' do %>
 <h2><%= product.title %></h2>
    <% end %>
-<h3>El valor es  $ <%= product.price%></h3>
+   
+<h3><%= t('shared._product.value')%><%= product.price%></h3>
 <hr>

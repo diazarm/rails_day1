@@ -33,3 +33,16 @@ es:
       updated: "Tu producto se ha actualizado correctamente"
     destroy:
       delete: "Tu producto se ha eliminado correctamente"
+    submit: "Crear producto"
+    show:
+      chosen_product: "Producto elegido"
+      edit_product: "Editar producto"
+      delete_product: "Eliminar producto"
+      description: "Descripcion del producto"
+    title: "Detalles del producto"
+  shared:
+    _header:
+      title: "Holis a todis"
+      newProduct: "Añadir un nuevo producto"
+    _product:
+      value: "El valor es: $ "

@@ -11,13 +11,13 @@ pt:
   errors:
     models:
       product:
-  attributes:
-    title:
-      blank: "O título não pode ficar em branco"
-    description:
-      blank: "A descrição não pode ficar em branco"
-    price:
-      blank: "O preço não pode ficar em branco"
+    attributes:
+      title:
+        blank: "O título não pode ficar em branco"
+      description:
+        blank: "A descrição não pode ficar em branco"
+      price:
+        blank: "O preço não pode ficar em branco"
   common:
     confirm: "Tem certeza?"
   products:
@@ -33,3 +33,15 @@ pt:
       updated: "Seu produto foi atualizado com sucesso"
     destroy:
       delete: "Seu produto foi excluído com sucesso"
+    submit: "Criar produto"
+    show:
+      chosen_product: "produto escolhido"
+      edit_product: "Editar produto"
+      delete_product: "Excluir produto"
+      description: "Descrição do produto"
+  shared:
+    _header:
+      title: "Bem-vindo ao nosso site de produtos incríveis"
+      newProduct: "Novo produto"
+    _product:
+      value: "O valor é: R$ "
