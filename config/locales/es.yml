@@ -46,3 +46,12 @@ es:
       newProduct: "Añadir un nuevo producto"
     _product:
       value: "El valor es: $ "
+  categories:
+    index:
+      title: "Categorias"
+      new_category: "Nueva categoria"
+    new:
+      new_category: "Nueva categoria"
+      back: "Volver a categoria"
+    submit: "Crear categoria"
+

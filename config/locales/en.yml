@@ -45,3 +45,11 @@ en:
       newProduct: "New product"
     _product:
       value: "Cost: $ "
+  categories:
+    index:
+      title: "Categories"
+      new_category: "New category"
+    new:
+      new_category: "New category"
+      back: "Back to category"
+    submit: "Create category"

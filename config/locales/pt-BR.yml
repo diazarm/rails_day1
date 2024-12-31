@@ -45,3 +45,11 @@ pt:
       newProduct: "Novo produto"
     _product:
       value: "O valor é: R$ "
+  categories:
+    index:
+      title: "Categorias"
+      new_category: "Nova categoria"
+    new:
+      new_category: "Nova categoria"
+      back: "retornar à categoria"
+    submit: "Criar a nova categoria"
