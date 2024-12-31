@@ -1,0 +1,35 @@
+pt:
+  activerecord:
+    models:
+      product: "Produto"
+    attributes:
+      product:
+        title: "Título"
+        description: "Descrição"
+        price: "Preço"
+        photo: "Foto"
+  errors:
+    models:
+      product:
+  attributes:
+    title:
+      blank: "O título não pode ficar em branco"
+    description:
+      blank: "A descrição não pode ficar em branco"
+    price:
+      blank: "O preço não pode ficar em branco"
+  common:
+    confirm: "Tem certeza?"
+  products:
+    edit:
+      title: "Editar produto"
+    new:
+      title: "Criar produto"
+    index:
+      title: "Produtos maravilhosos"
+    create:
+      created: "Seu produto foi criado com sucesso"
+    update:
+      updated: "Seu produto foi atualizado com sucesso"
+    destroy:
+      delete: "Seu produto foi excluído com sucesso"

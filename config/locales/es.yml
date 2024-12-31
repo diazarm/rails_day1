@@ -8,6 +8,16 @@ es:
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
+  errors:
+    models:
+      product:
+    attributes:
+      title: 
+        blank: 'El título es obligatorio'
+      description:
+        blank: 'La descripcion es obligatoria'
+      price:
+        blank: 'El precio es obligatorio'
   common:
     confirm: '¿Estás seguro?' 
   products:
